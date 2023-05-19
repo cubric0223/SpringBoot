@@ -11,7 +11,11 @@ import javax.persistence.*;
 @Entity(name = "ToDo")
 @Table(name = "todo")
 @AllArgsConstructor
+<<<<<<< HEAD
 @NoArgsConstructor(force = true)
+=======
+@NoArgsConstructor
+>>>>>>> 671eb93429d94c4e82b3477caea7b44133995424
 @Setter
 @Getter
 public class ToDo {
