@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>상품 추가</title>
+</head>
+<body>
+<h1>상품 추가</h1>
+<form action="/products/add" method="POST">
+  <label for="name">상품명:</label>
+  <input type="text" id="name" name="name" required><br><br>
+  <label for="description">상세 설명:</label><br>
+  <textarea id="description" name="description" rows="5" required></textarea><br><br>
+  <input type="submit" value="추가">
+</form>
+</body>
+</html>
