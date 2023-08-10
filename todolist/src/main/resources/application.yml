@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+#Spring Data Source
+=======
 # Spring Data Source ??
+>>>>>>> 671eb93429d94c4e82b3477caea7b44133995424
 
 spring:
   datasource:
@@ -13,4 +17,8 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+<<<<<<< HEAD
+ #database-platform: org.hibernate.spatial.dialect.mysql.MySQL56InnoDBSpatialDialect
+=======
  #   database-platform: org.hibernate.spatial.dialect.mysql.MySQL56InnoDBSpatialDialect
+>>>>>>> 671eb93429d94c4e82b3477caea7b44133995424

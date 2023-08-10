@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2228d333951df43849bd2342a99dbca952e77062
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <title>Todo App</title>
@@ -12,7 +16,10 @@
 <ul>
     <li th:each="todo : ${todos}">
         <span th:text="${todo.todo}"></span>
+<<<<<<< HEAD
 <!--delete버튼을 만들고 id를 넘겨주는 형식-->
+=======
+>>>>>>> 2228d333951df43849bd2342a99dbca952e77062
         <form th:action="@{/delete/{id}(id=${todo.id})}" method="post" style="display: inline;">
             <input type="hidden" name="_method" value="DELETE" />
             <button type="submit">Delete</button>
@@ -20,4 +27,25 @@
     </li>
 </ul>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+=======
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <h1>Todo App</h1>
+    <form method="post" action="/addTodo">
+        <input type="text" name="todo" />
+        <input type="submit" name="Add todo" />
+    </form>
+    <hr>
+    <ul>
+        <li th:each="todo : ${todos}">
+            <span th:text="${todo.todo}"></span>
+        </li>
+    </ul>
+</html>
+>>>>>>> 671eb93429d94c4e82b3477caea7b44133995424
+>>>>>>> 2228d333951df43849bd2342a99dbca952e77062
