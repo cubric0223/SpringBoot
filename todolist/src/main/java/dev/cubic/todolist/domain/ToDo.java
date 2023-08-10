@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity(name = "ToDo")
 @Table(name = "todo")
 @AllArgsConstructor
-@NoArgsConstructor
+@NoArgsConstructor(force = true)
 @Setter
 @Getter
 public class ToDo {

@@ -1,35 +1,33 @@
 import java.util.Scanner;
 
 public class Main {
+    public static void countNum(int k, int[] count) {
+        int a = 0, b = 1;
+
+        for (int i = 2; i <= k; i++) {
+            int temp = b;
+            b = a + b;
+            a = temp;
+        }
+
+        count[0] = a;
+        count[1] = b;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
+        int c = scanner.nextInt();
 
-        int cnt = 0;
+        int[] count = new int[2];
+        countNum(c, count);
 
-        for (int i = 0; i < N; i++) {
-            String word = scanner.next();
-            int[] alpha = new int[26];
-            int group = 1;
-            char pre = word.charAt(0);
-
-            alpha[pre - 'a']++;
-
-            for (int j = 1; j < word.length(); j++) {
-                if (pre != word.charAt(j) && alpha[word.charAt(j) - 'a'] > 0) {
-                    group = 0;
-                    break;
-                }
-
-                pre = word.charAt(j);
-                alpha[pre - 'a']++;
-            }
-
-            if (group == 1) {
-                cnt++;
-            }
-        }
-        System.out.println(cnt);
+        System.out.println(count[0] + " " + count[1]);
         scanner.close();
     }
 }
+
+// 	    a   b
+// 1,	0	1
+// 2,	1	2
+// 3,	2	3
+// 4,	3	5

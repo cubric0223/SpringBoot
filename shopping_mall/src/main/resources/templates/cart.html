@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>장바구니</title>
+    <link rel="stylesheet" type="text/css" href="/css/cart.css">
 </head>
 <body>
-$END$
+<h1>장바구니</h1>
+
+<div class="cart-items">
+    <div class="cart-item" th:each="item : ${cartItems}">
+        <img class="item-image" th:src="@{'/images/' + ${item.product.imageName}}" th:alt="${item.product.name}">
+        <h2 class="item-name" th:text="${item.product.name}"></h2>
+        <p class="item-description" th:text="${item.product.description}"></p>
+        <p class="item-price" th:text="'가격 : ₩' + ${item.price}"></p>
+        <form th:action="@{'/cart/remove/' + ${item.id}}" method="post">
+            <button type="submit" class="btn btn-danger">삭제</button>
+        </form>
+    </div>
+</div>
+
+<div class="total-payment">
+    <p class="total-amount" th:text="'총 가격: ₩' + ${#aggregates.sum(cartItems.![price])}"></p>
+</div>
+
+<a href="/" class="btn btn-primary">뒤로 가기</a>
+<button class="btn btn-success">결제</button>
+
 </body>
 </html>

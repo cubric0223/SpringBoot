@@ -2,16 +2,19 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>상품 추가</title>
+  <title>Add Product</title>
+  <link rel="stylesheet" type="text/css" href="/css/add_product.css">
 </head>
 <body>
-<h1>상품 추가</h1>
-<form action="/products/add" method="POST">
-  <label for="name">상품명:</label>
-  <input type="text" id="name" name="name" required><br><br>
-  <label for="description">상세 설명:</label><br>
-  <textarea id="description" name="description" rows="5" required></textarea><br><br>
-  <input type="submit" value="추가">
-</form>
+<h1>Add Product</h1>
+<div class="product-form">
+  <form th:action="@{/add}" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Product name" required>
+    <textarea name="description" placeholder="Product description" rows="5" required></textarea>
+    <input type="number" name="price" placeholder="Product price"  required>
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Add Product</button>
+  </form>
+</div>
 </body>
 </html>

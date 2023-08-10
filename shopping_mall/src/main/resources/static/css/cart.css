@@ -1,0 +1,30 @@
+/* cart.css */
+
+.cart-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cart-item {
+    flex: 1 0 20%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.item-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item-description {
+  font-size: 16px;
+  color: #777;
+}
+.item-image {
+    width: 100%;
+    height: auto;
+}
